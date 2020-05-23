@@ -33,17 +33,21 @@
       <!-- Здесь будет форма стоимости -->    
       <fieldset>
         <legend><h3>Сетка:</h3></legend>
-        <input type="radio" name="grid" value="adaptive" id="field-grid-adaptive" checked><label for="field-grid-adaptive">Адаптивная</label><br>
-        <input type="radio" name="grid" value="fixed" id="field-grid-fixed"><label for="field-grid-fixed">Фиксированная</label><br>
-        <input type="radio" name="grid" value="rubber" id="field-grid-rubber"><label for="field-grid-rubber">Резиновая</label>
+        <ul>
+          <li><input type="radio" name="grid" value="adaptive" id="field-grid-adaptive" checked><label for="field-grid-adaptive">Адаптивная</label></li>
+          <li><input type="radio" name="grid" value="fixed" id="field-grid-fixed"><label for="field-grid-fixed">Фиксированная</label></li>
+          <li><input type="radio" name="grid" value="rubber" id="field-grid-rubber"><label for="field-grid-rubber">Резиновая</label></li>
+        </ul>
       </fieldset>
       <fieldset>
         <legend><h3>Особенности:</h3></legend>
-        <input type="checkbox" name="slider" id="field-slider" checked><label for="field-slider">Слайдер</label><br>
-        <input type="checkbox" name="block-advantage" id="field-block-advantage"><label for="field-block-advantage">Блок преимуществ</label><br>
-        <input type="checkbox" name="news" id="field-news" checked><label for="field-news">Новости</label><br>
-        <input type="checkbox" name="gallery" id="field-gallery"><label for="field-gallery">Галерея</label><br>
-        <input type="checkbox" name="cart" id="field-cart"><label for="field-cart">Корзина</label>
+        <ul>
+          <li><input type="checkbox" name="slider" id="field-slider" checked><label for="field-slider">Слайдер</label></li>
+          <li><input type="checkbox" name="block-advantage" id="field-block-advantage"><label for="field-block-advantage">Блок преимуществ</label></li>
+          <li><input type="checkbox" name="news" id="field-news" checked><label for="field-news">Новости</label></li>
+          <li><input type="checkbox" name="gallery" id="field-gallery"><label for="field-gallery">Галерея</label></li>
+          <li><input type="checkbox" name="cart" id="field-cart"><label for="field-cart">Корзина</label></li>
+        </ul>
       </fieldset>
       <button type="submit">Показать</button>
     </form>
@@ -154,18 +158,24 @@
   <h2>Напишите нам</h2>
   <button type="button">Закрыть</button>
   <form action="https://echo.htmlacademy.ru/" method="POST">
-    <label>
-      Ваше имя:
-      <input type="text" name="username" placeholder="Имя Фамилия" required>
-    </label>
-    <label>
-      Ваш email:
-      <input type="email" name="email" placeholder="email@example.com" required>
-    </label>
-    <label>
-      Текст письма:
-      <textarea name="letter" placeholder="В свободной форме" required></textarea>
-    </label>
+    <p>
+      <label>
+        Ваше имя:
+        <input type="text" name="username" placeholder="Имя Фамилия" required>
+      </label>
+    </p>
+    <p>
+      <label>
+        Ваш email:
+        <input type="email" name="email" placeholder="email@example.com" required>
+      </label>
+    </p>
+    <p>
+      <label>
+        Текст письма:
+        <textarea name="letter" placeholder="В свободной форме" required></textarea>
+      </label>
+    </p>
     <input type="submit" value="Отправить">
   </form>
 </section>
