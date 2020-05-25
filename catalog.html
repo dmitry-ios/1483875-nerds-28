@@ -29,8 +29,19 @@
   <section>
     <h2 class="visually-hidden">Фильтр показа шаблонов</h2>
     <form action="https://echo.htmlacademy.ru/" method="GET">
-      <h3>Стоимость:</h3>
-      <!-- Здесь будет форма стоимости -->    
+      
+      <fieldset>
+        <legend><h3>Стоимость:</h3></legend>
+        <div>
+          <input type="button" name="cost-from-range" value="Начало">
+          <input type="button" name="cost-to-range" value="Конец">
+        </div>
+        <ul>
+          <li>от <input type="text" name="cost-from-value" value="0"></li>
+          <li>до <input type="text" name="cost-to-value" value="15 000"></li>
+        </ul>
+      </fieldset>
+          
       <fieldset>
         <legend><h3>Сетка:</h3></legend>
         <ul>
