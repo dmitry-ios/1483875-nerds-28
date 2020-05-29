@@ -282,6 +282,7 @@ button.button:active {
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
+    margin-bottom: 11px;
 }
 
 .filter-form ul {
@@ -295,7 +296,8 @@ button.button:active {
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
-    color: var(--basic-blue-dark)
+    color: var(--basic-blue-dark);
+    padding-left: 11px;
 }
 
 .filter-form fieldset {
