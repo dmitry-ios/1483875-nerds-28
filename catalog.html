@@ -3,32 +3,38 @@
 <head>
   <meta charset="utf-8">
   <title>Нёрдс – Магазин</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-  <nav>
+  <nav class="main-navigation">
     <a href="index.html">
       <img src="img/nerds-logo.svg" width="160" height="65" alt="Сайт студии дизайна «Нёрдс»">
     </a>
-    <ul>
+    <ul class="site-navigation">
       <li><a href="index.html">Студия</a></li>
       <li><a href="">Клиенты</a></li>
       <li><a href="">Магазин</a></li>
       <li><a href="">Контакты</a></li>
     </ul>
-    <a href="">Корзина</a>
+    <div class="user-navigation">
+      <a href="">Корзина</a>
+    </div>
   </nav>
 </header>
 
 <main>
-  <section>
-    <h1>Магазин готовых шаблонов</h1>
+  <section class="catalog-heading">
+    <div class="container">
+      <h1>Магазин готовых шаблонов</h1>
+    </div>    
   </section>
 
   <section>
     <h2 class="visually-hidden">Фильтр показа шаблонов</h2>
-    <form action="https://echo.htmlacademy.ru/" method="GET">
+    <form class="filter-form" action="https://echo.htmlacademy.ru/" method="GET">
       
       <fieldset>
         <legend><h3>Стоимость:</h3></legend>
@@ -43,7 +49,7 @@
       </fieldset>
           
       <fieldset>
-        <legend><h3>Сетка:</h3></legend>
+        <legend><h3 class="filter-heading">Сетка:</h3></legend>
         <ul>
           <li><input type="radio" name="grid" value="adaptive" id="field-grid-adaptive" checked><label for="field-grid-adaptive">Адаптивная</label></li>
           <li><input type="radio" name="grid" value="fixed" id="field-grid-fixed"><label for="field-grid-fixed">Фиксированная</label></li>
@@ -51,7 +57,7 @@
         </ul>
       </fieldset>
       <fieldset>
-        <legend><h3>Особенности:</h3></legend>
+        <legend><h3 class="filter-heading">Особенности:</h3></legend>
         <ul>
           <li><input type="checkbox" name="slider" id="field-slider" checked><label for="field-slider">Слайдер</label></li>
           <li><input type="checkbox" name="block-advantage" id="field-block-advantage"><label for="field-block-advantage">Блок преимуществ</label></li>
@@ -60,7 +66,7 @@
           <li><input type="checkbox" name="cart" id="field-cart"><label for="field-cart">Корзина</label></li>
         </ul>
       </fieldset>
-      <button type="submit">Показать</button>
+      <button class="button" type="submit">Показать</button>
     </form>
   </section>
 
@@ -75,10 +81,10 @@
       <li><a href="">По возрастанию</a></li>
     </ul>
     
-    <ul>
+    <ul class="list-template">
       <li>
         <a href=""><img src="img/sedona-template.jpg" width="360" height="580" alt="Sedona"></a>
-        <div>
+        <div class="modal">
           <h3><a href="">Sedona</a></h3>
           <p>Информационный сайт для туристов</p>
           <a href="">9 900 ₽</a>
@@ -87,7 +93,7 @@
       
       <li>
         <a href=""><img src="img/pink-template.jpg" width="360" height="580" alt="Pink"></a>
-        <div>
+        <div class="modal">
           <h3><a href="">Pink App</a></h3>
           <p>Продуктовый лендинг приложения для iOS и Android</p>
           <a href="">9 900 ₽</a>
@@ -96,7 +102,7 @@
       
       <li>
         <a href=""><img src="img/borodinski-template.jpg" width="360" height="580" alt="Borodinski"></a>
-        <div>
+        <div class="modal">
           <h3><a href="">Barbershop</a></h3>
           <p>Сайт салона красоты. Для мужчин, да.</p>
           <a href="">9 900 ₽</a>
@@ -105,7 +111,7 @@
       
       <li>
         <a href=""><img src="img/mishka-template.jpg" width="360" height="580" alt="Mishka"></a>
-        <div>
+        <div class="modal">
           <h3><a href="">Mishka</a></h3>
           <p>Интернет-магазин вязаных игрушек</p>
           <a href="">9 900 ₽</a>
@@ -114,7 +120,7 @@
       
       <li>
         <a href=""><img src="img/aplus-template.jpg" width="360" height="580" alt="A+"></a>
-        <div>
+        <div class="modal">
           <h3><a href="">A Plus</a></h3>
           <p>Лендинг курсов повышения квалификации</p>
           <a href="">9 900 ₽</a>
@@ -123,7 +129,7 @@
       
       <li>
         <a href=""><img src="img/kvast-template.jpg" width="360" height="580" alt="Кваст"></a>
-        <div>
+        <div class="modal">
           <h3><a href="">Кваст</a></h3>
           <p>Промо-сайт производителя крафтового кваса</p>
           <a href="">9 900 ₽</a>
@@ -153,7 +159,7 @@
     </div>
     <!-- Здесь будет маркер на карте -->
   </section>
-  <section>
+  <section class="social">
     <h2 class="visually-hidden">Мы в социальных сетях</h2>
     <ul>
       <li><a href="">ВКонтакте</a></li>
@@ -165,7 +171,7 @@
   </section>
 </footer>
 
-<section>
+<section class="modal">
   <h2>Напишите нам</h2>
   <button type="button">Закрыть</button>
   <form action="https://echo.htmlacademy.ru/" method="POST">

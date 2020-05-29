@@ -1,0 +1,303 @@
+
+/* Custom fonts*/
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/web/roboto.woff2') format('woff2'), 
+            url('../fonts/web/roboto.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/web/robotobold.woff2') format('woff2'), 
+            url('../fonts/web/robotobold.woff') format('woff');
+}
+
+/* Variables */
+
+:root {
+    --basic-black: #000000;
+    --basic-blue-dark: #283136;
+    --basic-dark: #444444;
+    --basic-grey: #666666;
+    --basic-light-grey: #eeeeee;
+    --basic-grey-focus: #DFDFDF;
+    --basic-grey-active: #D5D5D5;
+    --basic-white: #ffffff;
+
+    --special-red: #FB565A;
+    --special-red-focus: #E74246;
+    --special-red-active: #D7373B;
+
+    --special-green: #00CA74;
+    --special-green-focus: #00BC6C;
+    --special-green-active: #00AA62;
+
+    --special-yellow: #EFC84A;
+    --special-yellow-focus: #EAB534;
+    --special-yellow-active: #E5A722;
+}
+
+/* Global */
+
+body {
+    min-width: 1160px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+/* Main navigation */
+
+.main-navigation {
+    line-height: 30px;
+    background-color: var(--basic-light-grey);
+}
+
+.site-navigation {
+    list-style: none;
+}
+
+/* User navigation */
+
+.user-navigation a,
+.site-navigation a {
+    color: var(--basic-black);
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus,
+.site-navigation a:hover,
+.site-navigation a:focus {
+    color: var(--special-red);
+}
+
+.user-navigation a:active,
+.site-navigation a:active {
+    color: var(--basic-black);
+    opacity: 0.3;
+}
+
+/* Our services */
+
+.our-services-list, .social ul {
+    list-style: none;
+}
+
+.our-services-list li {
+    margin-bottom: 20px;
+}
+
+.our-services-list h3 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.our-services-list p {
+    color: var(--basic-blue-dark);
+    line-height: 24px;
+    margin-bottom: 32px;
+}
+
+.our-services-list div {
+    width: 300px;
+    height: 146px;
+}
+
+.our-service-illustration-1 {
+    background-image: url('../img/illustration-1_1.png');
+}
+
+.our-service-illustration-2 {
+    background-image: url('../img/illustration-2_1.png');
+}
+
+.our-service-illustration-3 {
+    background-image: url('../img/illustration-3_1.png');
+}
+
+/* Buttons */
+
+.button {
+    color: var(--basic-white);
+    border-radius: 3px;
+    background-color: var(--special-red);
+    padding-top: 17px;
+    padding-bottom: 15px;
+    padding-left: 39px;
+    padding-right: 40px;
+    border: 0;
+}
+
+/* Web-site buttons */
+
+.button.red-button:active {
+    background-color: var(--special-red-active);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.button.red-button:focus, 
+.button.red-button:hover {
+    background-color: var(--special-red-focus);
+}
+
+/* App buttons */
+
+.green-button {
+    background-color: var(--special-green);
+}
+
+.button.green-button:active {
+    background-color: var(--special-green-active);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.button.green-button:focus, 
+.button.green-button:hover {
+    background-color: var(--special-green-focus);
+}
+
+/* Presentation button */
+
+.yellow-button {
+    background-color: var(--special-yellow);
+}
+
+.button.yellow-button:active {
+    background-color: var(--special-yellow-active);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.button.yellow-button:focus, 
+.button.yellow-button:hover {
+    background-color: var(--special-yellow-focus);
+}
+
+/* Footer */
+
+.social h2 {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.social p {
+    font-weight: normal;
+    font-style: normal;
+    line-height: 22px;
+}
+
+
+/* Modals */
+
+.modal {
+    display: none;
+}
+
+/* Catalog */
+.catalog-heading div {
+    margin: 0 auto;
+}
+
+.catalog-heading h1 {
+    background-color: var(--basic-light-grey);
+    font-size: 55px;
+    line-height: 55px;
+    text-align: center;
+    padding-top: 78px;
+    padding-bottom: 108px;
+    margin: 0;
+}
+
+/* Show button */
+
+button.button {
+    text-transform: uppercase;
+    background-color: var(--basic-light-grey);
+    color: var(--basic-black);
+    padding-top: 17px;
+    padding-bottom: 15px;
+    padding-left: 88px;
+    padding-right: 89px;
+}
+
+button.button:focus, 
+button.button:hover {
+    background-color: var(--basic-grey-focus);
+    border: 0;
+}
+
+button.button:active {
+    background-color: var(--basic-grey-active);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    border: 0;
+}
+
+/* Templates */
+
+.list-template {
+    list-style: none;
+}
+
+/* Filter */
+
+.filter-heading {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.filter-form ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-form label {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--basic-blue-dark)
+}
+
+.filter-form fieldset {
+    border: 0;
+}
