@@ -111,6 +111,49 @@ img {
     opacity: 0.3;
 }
 
+/* Slider */
+
+.slide-switch {
+    list-style: none;
+    padding: 0;
+}
+
+.slide {
+    width: 1157px;
+    height: 431px;
+    background-color: var(--basic-light-grey);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.slide h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    width: 50%;
+    margin-top: 75px;
+    margin-bottom: 25px;
+}
+
+.slide p {
+    width: 50%;
+    margin-bottom: 26px;
+    color: var(--basic-blue-dark);
+}
+
+.slide.slide-what {
+    background-image: url("../img/nerds-index-slide1.png");
+}
+
+.slide.slide-how {
+    background-image: url("../img/nerds-index-slide2.png");
+}
+
+.slide.slide-when {
+    background-image: url("../img/nerds-index-slide3.png");
+}
+
 /* Our services */
 
 .our-services-list, .social ul {
@@ -162,6 +205,14 @@ img {
     padding-left: 39px;
     padding-right: 40px;
     border: 0;
+}
+
+.button-slide {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 57px;
+    padding-right: 57px; 
+    margin-top: 26px;   
 }
 
 /* Web-site buttons */
@@ -302,4 +353,117 @@ button.button:active {
 
 .filter-form fieldset {
     border: 0;
+}
+
+/* About section */
+
+.section-about h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 45px;
+    margin-top: 74px;
+    margin-bottom: 32px;
+}
+
+.section-about p, .section-about b, .section-about ul {
+    color: var(--basic-blue-dark);
+}
+
+.section-about p {
+    margin-bottom: 40px;
+}
+
+.section-about ul {
+    margin-top: 23px;
+    list-style: none;
+    padding: 0;
+}
+
+.section-about b {
+    text-transform: uppercase;
+}
+
+/* Metrics section */
+
+.section-metrics table {
+    border-spacing: 22px;
+    margin-top: 31px;
+}
+
+.section-metrics th {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 64px;
+}
+
+.section-metrics td {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-blue-dark);
+}
+
+.section-metrics sup {
+    font-size: 26px;
+    line-height: 40px;
+}
+
+.section-metrics b {
+    text-transform: uppercase;
+}
+
+/* works section */
+
+.section-works ul {
+    list-style: none;
+}
+
+.section-works a {
+    opacity: 0.2;
+}
+
+.section-works a:hover {
+    opacity: 1.0;
+}
+
+.section-works a:active {
+    opacity: 0.1;
+}
+
+/* Contacts */
+
+.contacts {
+    width: 319px;
+    height: 308px;
+    box-sizing: border-box;
+}
+
+.contacts h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 49px;
+    margin-left: 50px;
+    
+}
+
+.contacts p {
+    color: var(--basic-grey);
+    margin-left: 50px;
+}
+
+.contacts p.phone {
+    margin-bottom: 37px;
+}
+
+.button-contact {
+    padding-top: 17px;
+    padding-bottom: 15px;
+    padding-left: 44px;
+    padding-right: 44px;   
+    margin-left: 50px;
 }
