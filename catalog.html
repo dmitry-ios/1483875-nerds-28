@@ -38,11 +38,11 @@
       
       <fieldset>
         <legend><h3>Стоимость:</h3></legend>
-        <div>
+        <div class="cost-range-container">
           <input type="button" name="cost-from-range" value="Начало">
           <input type="button" name="cost-to-range" value="Конец">
         </div>
-        <ul>
+        <ul class="cost-range-list">
           <li>от <input type="text" name="cost-from-value" value="0"></li>
           <li>до <input type="text" name="cost-to-value" value="15 000"></li>
         </ul>
@@ -72,8 +72,8 @@
 
   <section>
     <h2 class="visually-hidden">Список доступных шаблонов</h2>
-    <h3>Сортировать:</h3>
-    <ul>
+    <h3 class="filter-heading">Сортировать:</h3>
+    <ul class="list-sorting">
       <li><a>По цене</a></li>
       <li><a href="">По типу</a></li>
       <li><a href="">По названию</a></li>
@@ -138,12 +138,12 @@
     </ul>
   </section>
   
-  <ul>
-    <li><a class="visually-hidden">Предыдущая</a></li>
-    <li><a>1</a></li>
+  <ul class="pagination">
+    <li class="no-next-or-previous"><a class="text-pagination">Предыдущая</a></li>
+    <li class="current-list"><a class="current-page">1</a></li>
     <li><a href="">2</a></li>
     <li><a href="">3</a></li>
-    <li><a href="">Следующая</a></li>
+    <li><a class="text-pagination" href="">Следующая</a></li>
   </ul>
 </main>
 

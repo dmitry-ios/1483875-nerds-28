@@ -23,12 +23,14 @@
 
 :root {
     --basic-black: #000000;
+    --basic-black-active: rgba(0, 0, 0, 0.3);
     --basic-blue-dark: #283136;
     --basic-dark: #444444;
     --basic-grey: #666666;
     --basic-light-grey: #eeeeee;
     --basic-grey-focus: #DFDFDF;
     --basic-grey-active: #D5D5D5;
+    --basic-grey-current: #DBDBDB;
     --basic-white: #ffffff;
 
     --special-red: #FB565A;
@@ -334,6 +336,7 @@ button.button:active {
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 11px;
+    text-transform: uppercase;
 }
 
 .filter-form ul {
@@ -466,4 +469,127 @@ button.button:active {
     padding-left: 44px;
     padding-right: 44px;   
     margin-left: 50px;
+}
+
+/* Pagination */
+
+.pagination {
+    list-style: none;
+    padding: 0;
+    line-height: 18px;
+    color: var(--basic-black);
+}
+
+.pagination li {
+    padding-top: 17px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    margin: 5px;
+}
+
+.no-next-or-previous {
+    display: none;
+}
+
+.pagination li.current-list {
+    padding-top: 14px;
+    padding-bottom: 12px;
+}
+
+.pagination a {
+    padding-top: inherit;
+    padding-bottom: inherit;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: var(--basic-light-grey);
+    border-radius: 3px;
+}
+
+.pagination a.text-pagination {
+    padding-left: 78px;
+    padding-right: 77px;
+}
+
+
+.pagination a:focus,
+.pagination a:hover {
+    background-color: var(--basic-grey-focus);
+}
+
+.pagination a:active {
+    background-color: var(--basic-grey-active);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    color: var(--basic-black-active);
+}
+
+.pagination a.current-page,
+.pagination a.current-page:focus,
+.pagination a.current-page:hover,
+.pagination a.current-page:active {
+    border: 3px solid var(--basic-grey-current);
+    color: var(--basic-black);
+    box-shadow: none;
+    background-color: var(--basic-white);
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.pagination a:visited {
+    color: var(--basic-black);
+}
+
+/* Sorting */
+
+.list-sorting {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-sorting a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+    opacity: 0.3;
+}
+
+.list-sorting a:hover,
+.list-sorting a:focus {
+    opacity: 0.6;
+}
+
+.list-sorting a:active {
+    opacity: 1.0;
+}
+
+.list-sorting a:not([href]) {
+    opacity: 1.0;
+}
+
+.cost-range-container {
+    background-color: var(--basic-light-grey);
+    border-radius: 3px;
+    width: 260px;
+    height: 80px;
+}
+
+.cost-range-list li {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: var(--basic-blue-dark);
+}
+
+.cost-range-list input[type="text"] {
+    text-align: center;
+    width: 80px;
+    height: 38px;
+    border: 0;
+    background-color: var(--basic-light-grey);
+    border-radius: 3px;
 }
