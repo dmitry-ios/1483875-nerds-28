@@ -132,7 +132,7 @@ img {
 .container {
     width: 1160px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 10px;
 }
 
 /* User navigation */
@@ -210,12 +210,28 @@ img {
 
 /* Our services */
 
+.main-our-services {
+    margin-bottom: 95px;
+}
+
 .our-services-list, .social ul {
     list-style: none;
 }
 
+.our-services-list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+}
+
 .our-services-list li {
     margin-bottom: 20px;
+}
+
+.service-item {
+    width: 360px;
 }
 
 .our-services-list h3 {
