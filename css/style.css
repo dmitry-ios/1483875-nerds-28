@@ -363,7 +363,7 @@ img {
     line-height: 22px;
 }
 
-.social .container {
+.social-info-wrapper {
     display: grid;
     grid-template-columns: min-content 1fr;
 }
