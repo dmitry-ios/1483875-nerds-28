@@ -388,6 +388,13 @@ img {
     margin: 0;
 }
 
+.catalog-wrapper {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 140px;
+    padding-top: 55px;
+}
+
 /* Show button */
 
 button.button {
@@ -416,9 +423,21 @@ button.button:active {
 
 .list-template {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 41px;
+    row-gap: 31px;
+    width: 760px;
 }
 
 /* Filter */
+
+.filter-wrapper {
+    width: 260px;
+}
 
 .filter-heading {
     font-style: normal;
