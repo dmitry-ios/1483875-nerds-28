@@ -80,20 +80,66 @@ img {
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
+
+/* Latout */
+
+.page {
+    height: 100%;
+}
+
+.page-body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 
+        min-content 
+        1fr 
+        min-content;
+    align-content: start;
+}
+
+/* Main header */
+
+.main-header {
+    background-color: var(--basic-light-grey);
+}
 
 /* Main navigation */
 
 .main-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     line-height: 30px;
-    background-color: var(--basic-light-grey);
 }
 
 .site-navigation {
+    margin: 0px;
+    padding: 0px;
+    width: 440px;
     list-style: none;
 }
 
+/* Logo */
+
+.main-navigation-logo {
+    width: 160px;
+    height: 65px;
+}
+
+/* Container */
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0;
+}
+
 /* User navigation */
+
+.user-navigation {
+    max-width: 115px;
+}
 
 .user-navigation a,
 .site-navigation a {
@@ -111,6 +157,12 @@ img {
 .site-navigation a:active {
     color: var(--basic-black);
     opacity: 0.3;
+}
+
+/* Login link */
+
+.user-navigation .login-link {
+    padding-left: 40px;
 }
 
 /* Slider */
@@ -284,12 +336,11 @@ img {
 }
 
 /* Catalog */
-.catalog-heading div {
-    margin: 0 auto;
+.catalog-heading {
+    background-color: var(--basic-light-grey);
 }
 
 .catalog-heading h1 {
-    background-color: var(--basic-light-grey);
     font-size: 55px;
     line-height: 55px;
     text-align: center;
