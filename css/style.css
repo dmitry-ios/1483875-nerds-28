@@ -167,15 +167,21 @@ img {
 
 /* Slider */
 
+.main-how-we-work {
+    margin-bottom: 80px;
+    padding-top: 78px;
+    background-color: var(--basic-light-grey);
+}
+
 .slide-switch {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .slide {
     width: 1157px;
     height: 431px;
-    background-color: var(--basic-light-grey);
     background-repeat: no-repeat;
     background-position: top right;
 }
@@ -186,13 +192,13 @@ img {
     font-size: 55px;
     line-height: 55px;
     width: 50%;
-    margin-top: 75px;
+    margin-top: 0;
     margin-bottom: 25px;
 }
 
 .slide p {
     width: 50%;
-    margin-bottom: 26px;
+    margin-bottom: 55px;
     color: var(--basic-blue-dark);
 }
 
@@ -445,6 +451,7 @@ button.button:active {
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 11px;
+    margin-top: 0;
     text-transform: uppercase;
 }
 
@@ -469,12 +476,22 @@ button.button:active {
 
 /* About section */
 
+.main-about-and-metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 73px;
+}
+
+.section-about {
+    width: 660px;
+}
+
 .section-about h3 {
     font-style: normal;
     font-weight: 500;
     font-size: 45px;
     line-height: 45px;
-    margin-top: 74px;
+    margin-top: 73px;
     margin-bottom: 32px;
 }
 
@@ -498,9 +515,20 @@ button.button:active {
 
 /* Metrics section */
 
+.section-metrics {
+    display: flex;
+    flex-direction: column;
+    width: 374px;
+    margin-top: 39px;
+}
+
+.metrics-info-inner-wrapper {
+    text-align: center;
+    margin-top: 37px;
+}
+
 .section-metrics table {
     border-spacing: 22px;
-    margin-top: 31px;
 }
 
 .section-metrics th {
@@ -529,8 +557,16 @@ button.button:active {
 
 /* works section */
 
+.section-works {
+    margin-top: 46px;
+    margin-bottom: 44px;
+}
+
 .section-works ul {
+    display: flex;
+    justify-content: space-between;
     list-style: none;
+
 }
 
 .section-works a {
@@ -543,6 +579,12 @@ button.button:active {
 
 .section-works a:active {
     opacity: 0.1;
+}
+
+/* Footer */
+
+.main-footer {
+    margin-top: 80px;
 }
 
 /* Contacts */
@@ -583,10 +625,14 @@ button.button:active {
 /* Pagination */
 
 .pagination {
+    display: flex;
     list-style: none;
     padding: 0;
     line-height: 18px;
     color: var(--basic-black);
+    margin-left: 395px;
+    margin-top: 55px;
+    margin-bottom: 0;
 }
 
 .pagination li {
@@ -601,6 +647,7 @@ button.button:active {
 }
 
 .pagination li.current-list {
+    margin-top: 8px;
     padding-top: 14px;
     padding-bottom: 12px;
 }
@@ -649,10 +696,16 @@ button.button:active {
 
 /* Sorting */
 
+.filter-sort-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 .list-sorting {
     list-style: none;
     margin: 0;
     padding: 0;
+    max-width: 360px;
 }
 
 .list-sorting a {
