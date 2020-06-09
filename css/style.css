@@ -78,15 +78,19 @@ img {
     height: auto;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Latout */
@@ -177,6 +181,24 @@ img {
 .site-navigation a:active {
     color: var(--basic-black-active);
 }
+
+.site-navigation-current {
+    position: relative;
+}
+
+.site-navigation-current a:not([href]) {
+    color: var(--basic-black);
+}
+
+.site-navigation-current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -13px;
+    height: 2px;
+    background-color: var(--special-red);
+  }
 
 /* Login link */
 
@@ -501,6 +523,67 @@ button.button:active {
 
 .filter-form fieldset {
     border: 0;
+}
+
+.filter-option {
+    margin-bottom: 19px;
+    padding-left: 25px;
+}
+
+.filter-option label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-input-radio:hover + label::before,
+.filter-input-radio:focus + label::before,
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:focus + label::before {
+    opacity: 1.0;
+}
+
+/* Radio button control */
+
+.filter-input-radio + label::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: -5px;
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/radio-off.svg");
+    background-repeat: no-repeat;
+    opacity: 0.4;
+}
+
+.filter-input-radio:checked + label::before {
+    background-image: url("../img/radio-on.svg");
+}
+
+/* Checkbox control */
+
+.filter-input-checkbox + label::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: -5px;
+    width: 23px;
+    height: 23px;
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    background-size: 23px 23px;
+    background-position: left top;
+}
+
+.filter-input-checkbox:checked + label::before {
+    width: 25px;
+    height: 23px;
+    background-image: url("../img/checkbox-on.svg");
+    background-size: 25px 23px;
+    background-position: left top;
 }
 
 /* About section */
