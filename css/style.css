@@ -31,6 +31,7 @@
     --basic-grey: #666666;
     --basic-light-grey: #eeeeee;
     --basic-idle-grey: #e1e1e1;
+    --basic-grey-pin: #C1C1C1;
     --basic-grey-focus: #DFDFDF;
     --basic-grey-active: #D5D5D5;
     --basic-grey-current: #DBDBDB;
@@ -235,18 +236,56 @@ input[type="radio"].visually-hidden {
     background-color: var(--basic-light-grey);
 }
 
-.slide-switch {
-    list-style: none;
+.slider-wrapper {
+    position: relative;
+}
+
+.slider-switch {
+    position: absolute;
+    bottom: 96px;
+    left: calc(50% - 44px);
+    z-index: 100;
+    display: flex;
+    width: 88px;
+    justify-content: space-between;
+}
+
+.slider-switch button {
     padding: 0;
-    margin: 0;
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    background-color: var(--basic-white);
+    border: 1px solid var(--basic-white);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.slider-switch .slider-button-current::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: calc(50% - 4px);
+    top: calc(50% - 4px);
+    background-color: var(--basic-white);
+    border: 2px solid var(--basic-grey-pin);
+    border-radius: 50%;
+    box-sizing: border-box;
 }
 
 .slide {
+    display: none;
     width: 1157px;
     height: 431px;
     background-repeat: no-repeat;
     background-position: top right;
     padding-top: 1px;
+}
+
+.slide-current {
+    display: block;
 }
 
 .slide h3 {
@@ -542,6 +581,7 @@ button.button:active {
 
 .filter-form fieldset {
     border: 0;
+    margin-bottom: 45px;
 }
 
 .filter-option {
@@ -762,12 +802,34 @@ button.button:active {
     margin-top: 80px;
 }
 
+.map-section {
+    position: relative;
+}
+
+.map-section::after {
+    content: "";
+    position: absolute;
+    top: 68px;
+    right: 350px;
+    width: 231px;
+    height: 190px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: url("../img/map-marker-1.png");
+    background-position: 0 0;
+}
+
 /* Contacts */
 
 .contacts {
+    position: absolute;
+    top: 52px;
+    left: 140px;
     width: 319px;
     height: 308px;
     box-sizing: border-box;
+    background-color: var(--basic-white);
 }
 
 .contacts h2 {
@@ -877,6 +939,9 @@ button.button:active {
 }
 
 .list-sorting {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -884,6 +949,10 @@ button.button:active {
 }
 
 .list-sorting a {
+    display: block;
+    margin: 0;
+    margin-right: 25px;
+    padding: 0;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -891,6 +960,32 @@ button.button:active {
     text-transform: uppercase;
     color: var(--basic-black);
     opacity: 0.3;
+}
+
+.list-sorting .sort-icon {
+    position: relative;
+    width: 11px;
+    height: 10px;
+    margin-right: 18px;
+}
+
+.sort-icon::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 10px;
+    left: 0;
+    top: 0;
+    background-position: 0 0;
+    background-size: 11px 10px;
+}
+
+.sort-down::before {
+    background-image: url("../img/icon-down-dir.svg");
+}
+
+.sort-up::before {
+    background-image: url("../img/icon-up-dir.svg");
 }
 
 .list-sorting a:hover,
@@ -906,11 +1001,59 @@ button.button:active {
     opacity: 1.0;
 }
 
+/* Filter Controls */
+
 .cost-range-container {
+    position: relative;
     background-color: var(--basic-light-grey);
     border-radius: 3px;
-    width: 260px;
-    height: 80px;
+    width: 220px;
+    height: 41px;
+    margin-top: 48px;
+    margin-bottom: 14px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.cost-range-container .cost-range-scale {
+    height: 2px;
+    background-color: var(--basic-grey-normal);
+}
+
+.cost-range-container .cost-range-bar {
+    width: 70%;
+    height: 2px;
+    background-color: var(--special-green);
+}
+
+.cost-range-container .toggle {
+    width: 21px;
+    height: 22px;
+    background-image: url("../img/filter-button.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    top: 31px;
+    left: 0;
+    cursor: pointer;
+}
+
+.cost-range-container .toggle-min {
+    left: 18px;
+}
+
+.cost-range-container .toggle-max {
+    left: 160px;
+}
+
+.cost-range-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cost-range-list label {
+    padding: 0;
 }
 
 .cost-range-list li {
@@ -924,6 +1067,7 @@ button.button:active {
 
 .cost-range-list input[type="text"] {
     text-align: center;
+    margin-left: 11px;
     width: 80px;
     height: 38px;
     border: 0;
