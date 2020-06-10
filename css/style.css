@@ -293,7 +293,9 @@ input[type="radio"].visually-hidden {
 }
 
 .service-item {
+    position: relative;
     width: 360px;
+    padding-top: 146px;
 }
 
 .our-services-list h3 {
@@ -309,20 +311,26 @@ input[type="radio"].visually-hidden {
     margin-bottom: 32px;
 }
 
-.our-services-list div {
+.service-item.our-service-illustration-1::before,
+.service-item.our-service-illustration-2::before,
+.service-item.our-service-illustration-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 300px;
     height: 146px;
 }
 
-.our-service-illustration-1 {
+.service-item.our-service-illustration-1::before {
     background-image: url('../img/illustration-1_1.png');
 }
 
-.our-service-illustration-2 {
+.service-item.our-service-illustration-2::before {
     background-image: url('../img/illustration-2_1.png');
 }
 
-.our-service-illustration-3 {
+.service-item.our-service-illustration-3::before {
     background-image: url('../img/illustration-3_1.png');
 }
 
@@ -483,11 +491,15 @@ button.button:active {
     margin: 0;
     padding: 0;
     padding-top: 48px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 41px;
-    row-gap: 31px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 760px;
+}
+
+.item-template {
+    position: relative;
+    margin-bottom: 30px;
 }
 
 /* Filter */
@@ -871,41 +883,51 @@ button.button:active {
 /* Social icons */
 
 .icon {
+    position: relative;
+    display: block;
     width: 81px;
     height: 81px;
     background-color: var(--basic-idle-grey);
     border-radius: 50%;
+
 }
 
-.social-icon-wrapper {
+.icon::before {
+    content: "";
+    position: absolute;
     width: 81px;
     height: 81px;
     background-position: center center;
     background-repeat: no-repeat;
+    left: 0px;
+    top: 0px;
+    opacity: 1.0;
 }
 
-.icon-vk {
+.icon.icon-vk::before {
     background-image: url("../img/vk-icon.svg");
 }
 
-.icon-fb {
+.icon.icon-fb::before {
     background-image: url("../img/fb-icon.svg");
 }
 
-.icon-insta {
+.icon.icon-insta::before {
     background-image: url("../img/insta-icon.svg");
 }
 
-a:focus .icon,
-a:hover .icon {
+.icon:focus,
+.icon:hover {
     background-color: var(--special-red-focus);
 }
 
-a:active .icon {
+.icon:active {
     background-color: var(--special-red-active);
 }
 
-a:active .social-icon-wrapper {
+.icon.icon-vk:active::before,
+.icon.icon-fb:active::before,
+.icon.icon-insta:active::before {
     opacity: 0.3;
 }
 
@@ -933,6 +955,8 @@ a:active .social-icon-wrapper {
 }
 
 .close-button {
+    width: 21px;
+    height: 21px;
     margin: 0;
     padding: 0;
     border: 0;
@@ -940,24 +964,19 @@ a:active .social-icon-wrapper {
     position: absolute;
     right: 90px;
     top: 78px;
-}
-
-.close-icon {
     background-image: url("../img/close-cross.svg");
     background-repeat: no-repeat;
-    width: 21px;
-    height: 21px;
-    margin: 0 auto;
-    padding: 0;
+    background-position: 0 0;
+    background-size: 21px 21px;
     opacity: 0.3;
 }
 
-.close-button:hover .close-icon,
-.close-button:focus .close-icon {
+.close-button:hover,
+.close-button:focus {
     opacity: 1.0;
 }
 
-.close-button:active .close-icon {
+.close-button:active {
     opacity: 0.1;
 }
 
@@ -1028,40 +1047,49 @@ a:active .social-icon-wrapper {
 
 /* Brower template list */
 
-.browser-wrapper {
+.browser-link {
+    display: block;
     position: relative;
     padding-top: 40px;
+    background: var(--basic-white);
+    box-shadow: 0px 6px 15px transparent;
     border-radius: 5px;
 }
 
-.browser-picture {
+.browser-link::before {
+    content: "";
     position: absolute;
-    background-image: url("../img/browser.png");
-    background-repeat: no-repeat;
-    width: 360px;
-    height: 40px;
-    opacity: 0.12;
     top: 0px;
     left: 0px;
+    width: 360px;
+    height: 40px;
+    background-image: url("../img/browser.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.12;
 }
 
-.browser-content {
-    background-color: var(--basic-grey-content);
-    border: 1px solid var(--basic-black-border);
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-
-a:hover .browser-picture {
+.browser-link:hover::before {
     opacity: 1.0;
 }
 
-a:hover .browser-content {
-    background-color: var(--basic-white);
+.browser-link:hover {
+    box-shadow: 0px 6px 15px var(--basic-white-shadow);
 }
 
-a:hover .browser-wrapper {
-    box-shadow: 0px 6px 15px var(--basic-white-shadow);
+.browser-content {
+    width: 360px;
+    height: 580px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--basic-black-border);
+    border-radius: 0px 0px 5px 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.browser-link:hover .browser-content {
+    border-color: var(--basic-white-shadow);
 }
 
 /* Browser Modal */
@@ -1076,6 +1104,12 @@ a:hover .browser-wrapper {
     width: 360px;
     height: 231px;
     background-color: var(--basic-light-grey);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--basic-light-grey);
+    border-radius: 0px 0px 5px 5px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .browser-modal h3 {
@@ -1117,10 +1151,6 @@ a:hover .browser-wrapper {
 
 .browser-modal-link:active {
     color: var(--basic-black-active);
-}
-
-.item-template {
-    position: relative;
 }
 
 /* Modals */
