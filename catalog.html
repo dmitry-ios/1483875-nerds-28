@@ -22,7 +22,7 @@
         <li><a href="">Контакты</a></li>
       </ul>
       <div class="user-navigation">
-        <a class="login-link" href="">Корзина</a>
+        <a class="cart-link" href="">Корзина</a>
       </div>
     </nav>
   </div>
@@ -262,7 +262,6 @@
             </a>
           </li>
         </ul>
-        </ul>
         <div class="social-ad-wrapper">
           <h2>Давайте дружить, это выгодно!</h2>
           <p>Скидка 10% для друзей из социальных сетей.</p>
@@ -272,7 +271,7 @@
   </section>
 </footer>
 
-<section class="feedback-dialog modal">
+<section class="feedback-dialog">
   <div class="form-container">
     <h2>Напишите нам</h2>
     <button class="close-button" type="button">
@@ -281,17 +280,17 @@
     <form action="https://echo.htmlacademy.ru/" method="POST">
       <div class="user-email-inner-wrapper">
         <p class="field-wrapper">
-          <label class="field-label" for="username">Ваше имя:</label>
-          <input type="text" name="username" placeholder="Имя Фамилия" required>
+          <label class="field-label" for="username-field">Ваше имя:</label>
+          <input type="text" name="username" id="username-field" placeholder="Имя Фамилия" required>
         </p>
         <p class="field-wrapper">
-          <label class="field-label" for="email">Ваш email:</label>
-          <input type="email" name="email" placeholder="email@example.com" required>
+          <label class="field-label" for="email-field">Ваш email:</label>
+          <input type="email" name="email" id="email-field" placeholder="email@example.com" required>
         </p>
       </div>
       <p class="field-wrapper field-letter">
-        <label class="field-label" for="letter">Текст письма:</label>
-        <textarea name="letter" placeholder="В свободной форме" required></textarea>
+        <label class="field-label" for="letter-field">Текст письма:</label>
+        <textarea name="letter" id="letter-field" placeholder="В свободной форме" required></textarea>
       </p>
       <input class="button red-button button-send" type="submit" value="Отправить">
     </form>

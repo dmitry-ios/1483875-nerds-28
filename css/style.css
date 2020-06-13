@@ -94,7 +94,7 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-/* Latout */
+/* Layout */
 
 .page {
     height: 100%;
@@ -136,11 +136,11 @@ input[type="radio"].visually-hidden {
 .site-navigation {
     margin: 0px;
     padding: 0px;
+    padding-top: 76px;
     width: 440px;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 /* Logo */
@@ -169,13 +169,14 @@ input[type="radio"].visually-hidden {
 
 .user-navigation {
     max-width: 115px;
+    padding-top: 76px;
 }
 
 .user-navigation a,
 .site-navigation a {
     color: var(--basic-black);
     display: block;
-    padding-top: 76px;
+    margin-right: 35px;
 }
 
 .user-navigation a:hover,
@@ -205,25 +206,26 @@ input[type="radio"].visually-hidden {
     right: 0;
     bottom: -13px;
     height: 2px;
+    width: calc(100% - 35px);
     background-color: var(--special-red);
-  }
+}
 
 /* Login link */
 
-.login-link::before {
+.cart-link::before {
     content: "";
     position: absolute;
     width: 15px;
     height: 15px;
     left: 0px;
-    top: 82px;
+    top: 8px;
     background-image: url("../img/cart-icon.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 }
 
 
-.user-navigation .login-link {
+.user-navigation .cart-link {
     padding-left: 40px;
     position: relative;
 }
@@ -632,17 +634,18 @@ button.button:active {
     height: 23px;
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
-    opacity: 0.4;
-    background-size: 23px 23px;
+    background-size: contain;
     background-position: left top;
+    opacity: 0.4;
 }
 
 .filter-input-checkbox:checked + label::before {
-    width: 25px;
+    width: 26px;
     height: 23px;
     background-image: url("../img/checkbox-on.svg");
-    background-size: 25px 23px;
+    background-size: contain;
     background-position: left top;
+    background-repeat: no-repeat;
 }
 
 /* About section */
@@ -757,7 +760,8 @@ button.button:active {
 
 .section-works ul {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     list-style: none;
 }
@@ -779,7 +783,8 @@ button.button:active {
 
 .partner-list li {
     position: relative;
-    padding-right: 48px;
+    padding-right: 44px;
+    padding-left: 44px;
 }
 
 .partner-list li::after {
@@ -792,7 +797,7 @@ button.button:active {
     background-color: var(--basic-light-grey);
 }
 
-.partner-list li:last-child::after {
+.partner-list li:nth-child(4n)::after {
     display: none;
 }
 
@@ -824,7 +829,7 @@ button.button:active {
 
 .contacts {
     position: absolute;
-    top: 52px;
+    bottom: calc(50% - 308px / 2);
     left: 140px;
     width: 319px;
     height: 308px;
@@ -838,8 +843,7 @@ button.button:active {
     font-size: 18px;
     line-height: 30px;
     margin-top: 49px;
-    margin-left: 50px;
-    
+    margin-left: 50px;   
 }
 
 .contacts p {
@@ -863,6 +867,7 @@ button.button:active {
 
 .pagination {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     line-height: 18px;
@@ -890,6 +895,7 @@ button.button:active {
 }
 
 .pagination a {
+    color: inherit;
     padding-top: inherit;
     padding-bottom: inherit;
     padding-left: 20px;
@@ -902,7 +908,6 @@ button.button:active {
     padding-left: 78px;
     padding-right: 77px;
 }
-
 
 .pagination a:focus,
 .pagination a:hover {
@@ -1240,7 +1245,7 @@ button.button:active {
     text-transform: uppercase;
 }
 
-/* Brower template list */
+/* Browser template list */
 
 .browser-link {
     display: block;
