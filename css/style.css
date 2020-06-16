@@ -148,7 +148,8 @@ input[type="radio"].visually-hidden {
     margin: 0px;
     padding: 0px;
     padding-top: 76px;
-    width: 440px;
+    padding-bottom: 8px;
+    width: 480px;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -157,9 +158,10 @@ input[type="radio"].visually-hidden {
 /* Logo */
 
 .main-navigation-logo {
+    display: block;
     width: 160px;
-    height: 65px;
-    padding-top: 49px;
+    height: 66px;
+    padding-top: 48px;
 }
 
 /* Container */
@@ -179,15 +181,19 @@ input[type="radio"].visually-hidden {
 /* User navigation */
 
 .user-navigation {
-    max-width: 115px;
+    width: 115px;
     padding-top: 76px;
+    padding-bottom: 8px;
 }
 
 .user-navigation a,
 .site-navigation a {
     color: var(--basic-black);
     display: block;
-    margin-right: 35px;
+}
+
+.site-navigation a {
+    margin-right: 45px;
 }
 
 .user-navigation a:hover,
@@ -229,7 +235,7 @@ input[type="radio"].visually-hidden {
     width: 15px;
     height: 15px;
     left: 0px;
-    top: 8px;
+    top: 6px;
     background-image: url("../img/cart-icon.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -244,7 +250,7 @@ input[type="radio"].visually-hidden {
 /* Slider */
 
 .main-how-we-work {
-    margin-bottom: 80px;
+    margin-bottom: 79px;
     padding-top: 0;
     background-color: var(--basic-light-grey);
 }
@@ -332,7 +338,7 @@ input[type="radio"].visually-hidden {
 /* Our services */
 
 .main-our-services {
-    margin-bottom: 95px;
+    margin-bottom: 71px;
 }
 
 .our-services-list {
@@ -359,6 +365,7 @@ input[type="radio"].visually-hidden {
 }
 
 .our-services-list h3 {
+    margin-bottom: 17px;
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
@@ -368,7 +375,8 @@ input[type="radio"].visually-hidden {
 .our-services-list p {
     color: var(--basic-blue-dark);
     line-height: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 47px;
+    margin-top: 0px;
 }
 
 .service-item.our-service-illustration-1::before,
@@ -401,21 +409,24 @@ input[type="radio"].visually-hidden {
     border-radius: 3px;
     background-color: var(--special-red);
     padding-top: 17px;
-    padding-bottom: 15px;
+    padding-bottom: 14px;
     padding-left: 39px;
-    padding-right: 40px;
+    padding-right: 42px;
     border: 0;
 }
 
 .button-slide {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 57px;
-    padding-right: 57px; 
-    margin-top: 26px;   
+    padding-top: 18px;
+    padding-bottom: 13px;
+    padding-left: 54px;
+    padding-right: 56px; 
 }
 
 /* Web-site buttons */
+
+.red-button {
+    line-height: 18px;
+}
 
 .button.red-button:active {
     background-color: var(--special-red-active);
@@ -462,7 +473,7 @@ input[type="radio"].visually-hidden {
 /* Footer */
 
 .social {
-    padding: 75px 0;
+    padding: 70px 0;
 }
 
 .social ul {
@@ -478,6 +489,7 @@ input[type="radio"].visually-hidden {
 
 .social .social-ad-wrapper {
     margin: 0 auto;
+    margin-left: 139px;
 }
 
 .social h2 {
@@ -485,13 +497,15 @@ input[type="radio"].visually-hidden {
     font-style: normal;
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
+    margin-top: 24px;
 }
 
 .social p {
     font-weight: normal;
     font-style: normal;
     line-height: 22px;
+    margin-top: 20px;
 }
 
 .social-info-wrapper {
@@ -661,7 +675,7 @@ button.button:active {
 .main-about-and-metrics {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 73px;
+    margin-bottom: 56px;
 }
 
 .section-about {
@@ -673,8 +687,8 @@ button.button:active {
     font-weight: 500;
     font-size: 45px;
     line-height: 45px;
-    margin-top: 73px;
-    margin-bottom: 32px;
+    margin-top: 65px;
+    margin-bottom: 33px;
 }
 
 .section-about p, 
@@ -684,7 +698,7 @@ button.button:active {
 }
 
 .section-about p {
-    margin-bottom: 40px;
+    margin-bottom: 41px;
 }
 
 .section-about ul {
@@ -722,8 +736,8 @@ button.button:active {
 .section-metrics {
     display: flex;
     flex-direction: column;
-    width: 374px;
-    margin-top: 39px;
+    width: 360px;
+    margin-top: 32px;
 }
 
 .metrics-info-inner-wrapper {
@@ -732,7 +746,9 @@ button.button:active {
 }
 
 .section-metrics table {
-    border-spacing: 22px;
+    width: 100%;
+    margin-top: 26px;
+    border-collapse: collapse;
 }
 
 .section-metrics th {
@@ -740,6 +756,9 @@ button.button:active {
     font-weight: bold;
     font-size: 45px;
     line-height: 64px;
+    text-align: left;
+    vertical-align: bottom;
+    padding-bottom: 13px;
 }
 
 .section-metrics td {
@@ -747,6 +766,7 @@ button.button:active {
     font-weight: normal;
     font-size: 16px;
     line-height: 18px;
+    text-align: left;
     color: var(--basic-blue-dark);
 }
 
@@ -763,15 +783,15 @@ button.button:active {
 
 .section-works {
     margin-top: 46px;
-    margin-bottom: 44px;
+    margin-bottom: 38px;
 }
 
 .section-works ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     list-style: none;
+    padding-left: 31px;
 }
 
 .section-works a {
@@ -792,7 +812,7 @@ button.button:active {
 .partner-list li {
     position: relative;
     padding-right: 44px;
-    padding-left: 44px;
+    padding-left: 55px;
 }
 
 .partner-list li::after {
@@ -805,6 +825,11 @@ button.button:active {
     background-color: var(--basic-light-grey);
 }
 
+.partner-list li:nth-child(1),
+.partner-list li:nth-child(5n) {
+    padding-left: 0px;
+}
+
 .partner-list li:nth-child(4n)::after {
     display: none;
 }
@@ -812,7 +837,7 @@ button.button:active {
 /* Footer */
 
 .main-footer {
-    margin-top: 80px;
+    margin-top: 72px;
 }
 
 .map-section {
@@ -847,7 +872,7 @@ button.button:active {
 
 .contacts {
     position: absolute;
-    bottom: calc(50% - 308px / 2);
+    bottom: calc(50% - 328px / 2);
     left: calc(50% - 580px);
     width: 319px;
     height: 308px;
@@ -1400,4 +1425,47 @@ p.phone a {
 
 .modal {
     display: none;
+}
+
+.modal-show {
+    display: block;
+}
+
+/* Animations */
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(-1000px);
+    }
+    70% {
+        transform: translateX(30px);
+    }
+    90% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.modal-animation {
+    animation-name: bounce;
+    animation-duration: 0.6s;
+}
+
+.modal-error {
+    animation-name: shake;
+    animation-duration: 0.6s;
 }
