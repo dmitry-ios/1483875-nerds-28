@@ -36,14 +36,32 @@ closeButton.addEventListener("click", function (event) {
     feedbackDialog.classList.remove("modal-show");
     feedbackDialog.classList.remove("modal-error");
     feedbackDialog.classList.remove("modal-animation");
+
+    username.classList.remove("red-field");
+    email.classList.remove("red-field");
+    letter.classList.remove("red-field");
 });
 
 form.addEventListener("submit", function (event) {
+    username.classList.remove("red-field");
+    email.classList.remove("red-field");
+    letter.classList.remove("red-field");
+    
     if(!username.value || !email.value || !letter.value) {
         event.preventDefault();
         feedbackDialog.classList.remove("modal-error");
         feedbackDialog.offsetWidth = feedbackDialog.offsetWidth
         feedbackDialog.classList.add("modal-error");
+        
+        if(!username.value) {
+            username.classList.add("red-field");
+        }
+        if(!email.value) { 
+            email.classList.add("red-field");
+        }
+        if(!letter.value) {
+            letter.classList.add("red-field");
+        }
     }
     else {
         if (isLocalStorageSupport) {
@@ -61,6 +79,10 @@ window.addEventListener("keydown", function (event) {
             feedbackDialog.classList.remove("modal-show");
             feedbackDialog.classList.remove("modal-error");
             feedbackDialog.classList.remove("modal-animation");
+
+            username.classList.remove("red-field");
+            email.classList.remove("red-field");
+            letter.classList.remove("red-field");
         }
     }
 });
