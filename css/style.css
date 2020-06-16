@@ -216,14 +216,14 @@ input[type="radio"].visually-hidden {
     color: var(--basic-black);
 }
 
-.site-navigation-current::after {
+.site-navigation-current a::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     bottom: -13px;
     height: 2px;
-    width: calc(100% - 35px);
+    width: calc(100% - 45px);
     background-color: var(--special-red);
 }
 
@@ -505,7 +505,7 @@ input[type="radio"].visually-hidden {
     font-weight: normal;
     font-style: normal;
     line-height: 22px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .social-info-wrapper {
@@ -525,6 +525,7 @@ input[type="radio"].visually-hidden {
     text-align: center;
     padding-top: 78px;
     padding-bottom: 108px;
+    padding-right: 17px;
     margin: 0;
 }
 
@@ -595,10 +596,20 @@ button.button:active {
 .filter-form fieldset {
     border: 0;
     margin-bottom: 45px;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+.filter-form .grid-fieldset {
+    margin-bottom: 14px;
+}
+
+.filter-form .advantage-fieldset {
+    margin-bottom: 18px;
 }
 
 .filter-option {
-    margin-bottom: 19px;
+    margin-bottom: 21px;
     padding-left: 25px;
 }
 
@@ -836,8 +847,8 @@ button.button:active {
 
 /* Footer */
 
-.main-footer {
-    margin-top: 72px;
+.index-main {
+    margin-bottom: 72px;
 }
 
 .map-section {
@@ -896,7 +907,7 @@ button.button:active {
 }
 
 .contacts p.phone {
-    margin-bottom: 37px;
+    margin-bottom: 40px;
 }
 
 p.phone a {
@@ -921,8 +932,8 @@ p.phone a {
     line-height: 18px;
     color: var(--basic-black);
     margin-left: 395px;
-    margin-top: 55px;
-    margin-bottom: 0;
+    margin-top: 20px;
+    margin-bottom: 54px;
 }
 
 .pagination li {
@@ -930,6 +941,7 @@ p.phone a {
     padding-bottom: 15px;
     box-sizing: border-box;
     margin: 5px;
+    margin-right: 8px;
 }
 
 .no-next-or-previous {
@@ -1004,8 +1016,9 @@ p.phone a {
 .list-sorting a {
     display: block;
     margin: 0;
-    margin-right: 25px;
+    margin-right: 33px;
     padding: 0;
+    padding-bottom: 8px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -1019,7 +1032,7 @@ p.phone a {
     position: relative;
     width: 11px;
     height: 10px;
-    margin-right: 18px;
+    margin-right: 9px;
 }
 
 .sort-icon::before {
@@ -1062,7 +1075,7 @@ p.phone a {
     border-radius: 3px;
     width: 220px;
     height: 41px;
-    margin-top: 48px;
+    margin-top: 32px;
     margin-bottom: 14px;
     padding-top: 39px;
     padding-right: 20px;
@@ -1120,9 +1133,9 @@ p.phone a {
 
 .cost-range-list input[type="text"] {
     text-align: center;
-    margin-left: 11px;
-    width: 80px;
-    height: 38px;
+    margin-left: 8px;
+    width: 76px;
+    height: 36px;
     border: 0;
     background-color: var(--basic-light-grey);
     border-radius: 3px;
@@ -1301,7 +1314,7 @@ p.phone a {
 
     margin: 0;
     padding: 0;
-    padding-top: 48px;
+    padding-top: 38px;
     width: 760px;
 
     display: flex;
