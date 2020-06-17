@@ -86,3 +86,41 @@ window.addEventListener("keydown", function (event) {
         }
     }
 });
+
+/* Slider Logic */
+
+// Ищем в DOM всё переключатели и слайды.
+var slides = document.querySelectorAll(".main-how-we-work article");
+var switchers = document.querySelectorAll(".main-how-we-work button");
+
+// Каждой кнопке ставим обработчик на клик.
+for (var i = 0; i < switchers.length; ++i) {
+    
+    switchers[i].addEventListener("click", function (event) {
+        var currentButton = event.currentTarget;
+
+        // Ничего не делаем, если текущий слайд уже открыт.
+        if (currentButton.classList.contains("slider-button-current")) {
+            return;
+        }
+    
+        // Чистим стили слайдов и кнопок, включаем нажатую кнопку.
+        for (var j = 0; j < switchers.length; ++j) {
+            switchers[j].classList.remove("slider-button-current");
+            slides[j].classList.remove("slide-current");
+        }
+        currentButton.classList.add("slider-button-current");
+        
+        for (var j = 0; j < switchers.length; ++j) {
+
+            // Узнаем индекс текущей кнопки 
+            // и по аналогичному индексу открываем слайд.
+            if (switchers[j].classList.contains("slider-button-current")) {
+                var slide = slides[j];
+                slide.classList.add("slide-current");
+                break;
+            }
+        }
+    });
+
+}
