@@ -1276,8 +1276,8 @@ p.phone a {
 .feedback-dialog {
     position: absolute;
     z-index: 1000;
-    left: 240px;
-    bottom: 180px;
+    left: calc( (100% - 960px)/2 );
+    bottom: 192px;
 
     width: 960px;
     min-height: 590px;
