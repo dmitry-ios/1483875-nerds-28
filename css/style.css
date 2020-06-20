@@ -8,21 +8,21 @@
 /* Custom fonts*/
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url('../fonts/web/roboto.woff2') format('woff2'), 
-            url('../fonts/web/roboto.woff') format('woff');
+    src: url("../fonts/web/roboto.woff2") format("woff2"), 
+            url("../fonts/web/roboto.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('../fonts/web/robotobold.woff2') format('woff2'), 
-            url('../fonts/web/robotobold.woff') format('woff');
+    src: url("../fonts/web/robotobold.woff2") format("woff2"), 
+            url("../fonts/web/robotobold.woff") format("woff");
 }
 
 /* Variables */
@@ -344,7 +344,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slide p {
-    width: 50%;
+    width: 36%;
     margin-bottom: 55px;
     color: var(--basic-blue-dark);
 }
@@ -406,6 +406,7 @@ input[type="radio"].visually-hidden {
     line-height: 24px;
     margin-bottom: 47px;
     margin-top: 0px;
+    margin-right: 79px;
 }
 
 .service-item.our-service-illustration-1::before,
@@ -420,15 +421,15 @@ input[type="radio"].visually-hidden {
 }
 
 .service-item.our-service-illustration-1::before {
-    background-image: url('../img/illustration-1_1.png');
+    background-image: url("../img/illustration-1_1.png");
 }
 
 .service-item.our-service-illustration-2::before {
-    background-image: url('../img/illustration-2_1.png');
+    background-image: url("../img/illustration-2_1.png");
 }
 
 .service-item.our-service-illustration-3::before {
-    background-image: url('../img/illustration-3_1.png');
+    background-image: url("../img/illustration-3_1.png");
 }
 
 /* Buttons */
@@ -505,7 +506,7 @@ input[type="radio"].visually-hidden {
 /* Footer */
 
 .social {
-    padding: 70px 0;
+    padding: 54px 0;
 }
 
 .social ul {
@@ -534,7 +535,7 @@ input[type="radio"].visually-hidden {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 10px;
-    margin-top: 24px;
+    margin-top: 20px;
 }
 
 .social p {
@@ -824,6 +825,7 @@ button.button:active {
     text-align: left;
     vertical-align: bottom;
     padding-bottom: 13px;
+    padding-right: 20px;
 }
 
 .section-metrics td {
@@ -902,6 +904,8 @@ button.button:active {
 
 .partner-list li:nth-child(4n)::after {
     display: none;
+    padding-right: 0px;
+    padding-left: 80px;
 }
 
 /* Footer */
@@ -912,6 +916,7 @@ button.button:active {
 
 .map-section {
     position: relative;
+    min-height: 416px;
 }
 
 .map-section::after {
@@ -938,11 +943,17 @@ button.button:active {
     z-index: 100;
 }
 
+.map-section iframe {
+    width: 100%;
+    height: 416px;
+    border: 0;
+}
+
 /* Contacts */
 
 .contacts {
     position: absolute;
-    bottom: calc(50% - 328px / 2);
+    bottom: calc(50% - 308px / 2);
     left: calc(50% - 580px);
     width: 319px;
     height: 308px;
@@ -964,10 +975,14 @@ button.button:active {
 .contacts p {
     color: var(--basic-grey);
     margin-left: 50px;
+    margin-top: 21px;
+    margin-right: 60px;
+    line-height: 20px;
 }
 
 .contacts p.phone {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    margin-top: 16px;
 }
 
 p.phone a {
@@ -976,9 +991,9 @@ p.phone a {
 
 .button-contact {
     padding-top: 17px;
-    padding-bottom: 15px;
+    padding-bottom: 14px;
     padding-left: 44px;
-    padding-right: 44px;   
+    padding-right: 46px;   
     margin-left: 50px;
 }
 
@@ -1225,8 +1240,8 @@ p.phone a {
 .icon {
     position: relative;
     display: block;
-    width: 81px;
-    height: 81px;
+    width: 79px;
+    height: 79px;
     background-color: var(--basic-idle-grey);
     border-radius: 50%;
 
@@ -1276,8 +1291,8 @@ p.phone a {
 .feedback-dialog {
     position: absolute;
     z-index: 1000;
-    left: 240px;
-    bottom: 180px;
+    left: calc( (100% - 960px)/2 );
+    bottom: 192px;
 
     width: 960px;
     min-height: 590px;
@@ -1523,6 +1538,7 @@ p.phone a {
     margin: 0;
     margin-top: 12px;
     text-align: center;
+    width: 70%;
 }
 
 .browser-button {
