@@ -541,7 +541,7 @@ input[type="radio"].visually-hidden {
 
 /* Show button */
 
-button.button {
+.button[type="submit"] {
     text-transform: uppercase;
     background-color: var(--basic-light-grey);
     color: var(--basic-black);
@@ -551,13 +551,13 @@ button.button {
     padding-right: 89px;
 }
 
-button.button:focus, 
-button.button:hover {
+.button[type="submit"]:focus, 
+.button[type="submit"]:hover {
     background-color: var(--basic-grey-focus);
     border: 0;
 }
 
-button.button:active {
+.button[type="submit"]:active {
     background-color: var(--basic-grey-active);
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
     border: 0;
@@ -912,7 +912,7 @@ button.button:active {
     margin-left: 50px;   
 }
 
-.contacts p {
+.contacts .contacts-address {
     color: var(--basic-grey);
     margin-left: 50px;
     margin-top: 21px;
@@ -920,12 +920,16 @@ button.button:active {
     line-height: 20px;
 }
 
-.contacts p.phone {
+.contacts .contacts-phone {
+    color: var(--basic-grey);
+    margin-left: 50px;
     margin-bottom: 50px;
     margin-top: 16px;
+    margin-right: 60px;
+    line-height: 20px;
 }
 
-p.phone a {
+.phone-link {
     color: inherit;
 }
 
@@ -963,7 +967,7 @@ p.phone a {
     display: none;
 }
 
-.pagination li.current-list {
+.pagination .current-list {
     margin-top: 8px;
     padding-top: 14px;
     padding-bottom: 12px;
@@ -995,10 +999,10 @@ p.phone a {
     color: var(--basic-black-active);
 }
 
-.pagination a.current-page,
-.pagination a.current-page:focus,
-.pagination a.current-page:hover,
-.pagination a.current-page:active {
+.pagination .current-page,
+.pagination .current-page:focus,
+.pagination .current-page:hover,
+.pagination .current-page:active {
     border: 3px solid var(--basic-grey-current);
     color: var(--basic-black);
     box-shadow: none;
@@ -1312,7 +1316,7 @@ p.phone a {
     padding: 16px;
 }
 
-.button-send {
+.feedback-form .button-send {
     padding-top: 17px;
     padding-bottom: 15px;
     padding-left: 83px;
@@ -1320,6 +1324,18 @@ p.phone a {
     margin-top: 47px;
     margin-bottom: 47px;
     text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--special-red);
+}
+
+.feedback-form .button-send:active {
+    background-color: var(--special-red-active);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.feedback-form .button-send:focus, 
+.feedback-form .button-send:hover {
+    background-color: var(--special-red-focus);
 }
 
 .user-email-inner-wrapper [name="username"].red-field,
