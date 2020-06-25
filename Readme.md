@@ -1,3 +1,9 @@
+# Демонстрация сайта
+
+Посмотреть готовый сайт можно 
+* здесь https://htmlacademy-htmlcss.github.io/1483875-nerds-28/15/ 
+* или https://boring-jennings-6c9769.netlify.app/catalog.html
+
 # Личный проект «Нёрдс»
 
 * Студент: [Дмитрий Бессонов](https://up.htmlacademy.ru/htmlcss/28/user/1483875).
