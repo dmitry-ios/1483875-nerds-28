@@ -2,7 +2,7 @@
 
 Посмотреть готовый сайт можно 
 * здесь https://htmlacademy-htmlcss.github.io/1483875-nerds-28/15/ 
-* или https://boring-jennings-6c9769.netlify.app/catalog.html
+* или https://boring-jennings-6c9769.netlify.app/
 
 # Личный проект «Нёрдс»
 
